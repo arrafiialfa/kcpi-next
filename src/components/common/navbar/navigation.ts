@@ -1,16 +1,3 @@
-import {
-    CubeTransparentIcon,
-    UserCircleIcon,
-    CodeBracketSquareIcon,
-    Square3Stack3DIcon,
-    ChevronDownIcon,
-    Cog6ToothIcon,
-    InboxArrowDownIcon,
-    LifebuoyIcon,
-    PowerIcon,
-    RocketLaunchIcon,
-    Bars2Icon,
-} from "@heroicons/react/24/solid";
 
 export type Route = {
     label: string,
@@ -25,13 +12,11 @@ export const routes: Route[] = [
         children: [
             {
                 label: "Knowledge Centre",
-                route: "/tentang-knowledge-centre",
-                icon: UserCircleIcon,
+                route: "/tentang/tentang-knowledge-centre",
             },
             {
                 label: "Amanat Perubahan Iklim",
-                route: "/amanat-pi",
-                icon: CodeBracketSquareIcon,
+                route: "/tentang/amanat-pi",
             }
         ]
     },
@@ -39,11 +24,11 @@ export const routes: Route[] = [
         label: "Info Iklim",
         children: [
             {
-                route: "/mengenai-pi",
+                route: "/info-iklim/mengenai-pi",
                 label: "Mengenai Perubahan Iklim",
             },
             {
-                route: "/dampak-dan-fenomena",
+                route: "/info-iklim/dampak-dan-fenomena",
                 label: "Dampak dan Fenomena",
             }
         ]
@@ -52,19 +37,19 @@ export const routes: Route[] = [
         label: "Aksi",
         children: [
             {
-                route: "/mitigasi",
+                route: "/aksi/mitigasi",
                 label: "Mitigasi",
             },
             {
-                route: "/adaptasi",
+                route: "/aksi/adaptasi",
                 label: "Adaptasi",
             },
             {
-                route: "/redd",
+                route: "/aksi/redd",
                 label: "REDD+"
             },
             {
-                route: "/proklim",
+                route: "/aksi/proklim",
                 label: "PROKLIM"
             }
         ]
@@ -73,15 +58,15 @@ export const routes: Route[] = [
         label: "Sumber Daya",
         children: [
             {
-                route: "/sumber-dana",
+                route: "/sumber-daya/sumber-dana",
                 label: "Sumber Dana"
             },
             {
-                route: "/peningkatan-dan-kapasitas",
+                route: "/sumber-daya/peningkatan-dan-kapasitas",
                 label: "Peningkatan dan Kapasitas"
             },
             {
-                route: "/teknologi",
+                route: "/sumber-daya/teknologi",
                 label: "Teknologi"
             }
         ]

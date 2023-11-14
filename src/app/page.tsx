@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <section id="hero-img">
-        <header className="pt-28 mb-12">
+        <header className="pt-28 pb-12">
           <HeroSlider />
         </header>
       </section>
@@ -77,8 +77,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={sectionStlye}>
-        <div className="flex justify-around gap-2">
+      <section>
+        <div className={"flex justify-around gap-2 " + sectionStlye}>
           <div className="w-full">
             <iframe
               className="rounded shadow-md"
@@ -104,15 +104,15 @@ export default function Home() {
 
       <section
         style={{ backgroundImage: `url("/images/landingpage/bg2.png")` }}
-        className={"px-12 md:py-12 bg-green-200"}
+        className={"px-12 md:py-12"}
       >
         <div className={sectionStlye}>
           <h3
             className={
-              "font-semibold text-3xl my-6 text-center  text-gray-50 md:pb-24"
+              "font-semibold text-4xl my-6 text-center text-white md:mb-24 p-4"
             }
           >
-            Apa yang dapat kita lakukan
+            Apa yang dapat kita lakukan ?
           </h3>
           <div className="flex flex-wrap md:flex-nowrap gap-4">
             {displayActions.map((info) => {
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       <section className="bg-red-500">
-        <div className={sectionStlye}>
+        <div className={" xl:w-3/5 lg:w-3/4 px-6 py-12  mx-auto "}>
           <div className="flex flex-wrap md:flex-nowrap gap-4">
             {displayInfos.map((info) => {
               return (
@@ -158,16 +158,16 @@ export default function Home() {
       </section>
 
       <section className={sectionStlye}>
-        <div className="flex justify-between gap-4 py-16">
-          <div>
+        <div className="flex flex-wrap justify-center sm:justify-around gap-x-4 gap-y-6  py-16">
+          <div className="basis-2/5 sm:basis-1/3 lg:items-center ">
             <Image
               src="/images/landingpage/logo_pojok_iklim.png"
               alt="logo pjok iklim"
-              width={800}
-              height={800}
+              width={250}
+              height={250}
             />
           </div>
-          <div>
+          <div className="basis-3/5 grow">
             <p className="font-light text-justify">
               Pojok Iklim adalah forum komunikasi untuk membentuk upaya bersama
               dan sinergi upaya dari berbagai pihak pemangku kepentingan, Pojok

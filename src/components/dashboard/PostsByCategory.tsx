@@ -10,6 +10,7 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
+import Image from "next/image";
 
 type Post = {
   title: string;
@@ -64,14 +65,14 @@ export default function PostsByCategory({
               return (
                 <Card key={post.title} className="mt-6 w-96 grow">
                   <CardBody>
-                    {/* <div className="mb-12">
+                    <div className="mb-6 w-full h-44 relative rounded overflow-clip">
                       <Image
                         src={post.image}
                         alt="card-image"
-                        height={700}
-                        width={700}
+                        layout="fill"
+                        objectFit="cover"
                       />
-                    </div> */}
+                    </div>
                     <Typography variant="h5" color="blue-gray" className="mb-2">
                       {post.title}
                     </Typography>

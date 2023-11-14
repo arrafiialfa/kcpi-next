@@ -2,7 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const wrapper = (props) => {
-  return <div style={{ ...style, ...props.style }}>{props.children}</div>;
+  return (
+    <div className="backdrop-blur-sm" style={{ ...style, ...props.style }}>
+      {props.children}
+    </div>
+  );
 };
 
 wrapper.propTypes = {
@@ -25,5 +29,5 @@ const style = {
   margin: "0",
   padding: "0",
   pointerEvents: "none",
-  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  backgroundColor: "rgba(0, 0, 0, 0.4)",
 };

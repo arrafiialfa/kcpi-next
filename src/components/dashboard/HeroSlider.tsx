@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import HeroSlider, { Slide, SideNav, ButtonsNav, Overlay } from "hero-slider";
+import HeroSlider, { Slide, ButtonsNav, Overlay } from "hero-slider";
 import Wrapper from "../common/Wrapper";
 import { heroTitles } from "@/app/dashboard-data";
 
@@ -15,14 +15,14 @@ export default function Hero() {
 
   return (
     <HeroSlider
-      autoplay
+      autoplay={false}
       animations={{ slidingAnimation: "fade" }}
       width="full"
-      height={400}
+      height={650}
       controller={{
         initialSlide: 2,
         slidingDuration: 500,
-        slidingDelay: 500,
+        slidingDelay: 200,
         onSliding: (nextSlide: number) => {
           console.log(nextSlide);
         },
@@ -36,7 +36,7 @@ export default function Hero() {
     >
       <Overlay>
         <Wrapper>
-          <h1 className="m-0 p-0 w-3/5 text-center text-2xl font-bold text-white">
+          <h1 className="m-0 p-0 w-3/5 text-center text-2xl xl:text-3xl font-bold text-white">
             {currentOverlay.title}
           </h1>
           <p className=" text-white font-light my-8 text-center">
@@ -53,7 +53,10 @@ export default function Hero() {
           <Slide
             key={slide.title}
             label={slide.title}
+            shouldRenderMask
             background={{
+              backgroundAnimation: "zoom",
+              backgroundImageBlendMode: "color",
               backgroundImageSrc: slide.backgroundImage,
             }}
           />
@@ -61,12 +64,6 @@ export default function Hero() {
       })}
 
       <ButtonsNav />
-      <SideNav
-        position={{
-          top: "0",
-          right: "0",
-        }}
-      />
     </HeroSlider>
   );
 }
