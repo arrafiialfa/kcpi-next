@@ -93,19 +93,19 @@ export const displayPosts = [
 export const displayActions = [
   {
     title: "Aksi",
-    image: "aksi1.jpg",
+    image: "/images/landingpage/aksi/aksi1.jpg",
     description:
       "Aksi - aksi dalam pengendalian perubahan iklim dalam bentuk mitigasi, adaptasi dan perpaduan diantara keduanya",
   },
   {
     title: "Inovasi",
-    image: "aksi2.jpg",
+    image: "/images/landingpage/aksi/aksi2.jpg",
     description:
       "Inovasi yang dapat kita terapkan dalam upaya mencegah kenaikan suhu bumi tidak lebih dari 2° C.",
   },
   {
     title: "Sumber Daya",
-    image: "aksi3.jpg",
+    image: "/images/landingpage/aksi/aksi3.jpg",
     description:
       "Sumber Daya untuk pendukung aksi perubahan iklim, seperti pendanaan, peningkatan kapasitas dan alih teknologi",
   },
@@ -136,5 +136,50 @@ export const displayInfos = [
     image: "/images/landingpage/info/info5.png",
     description:
       "Kumpulan infografis - Meme - Komik tentang dampak, penyebab dan pengertian maupun analisa ilmiah tentang perubahan iklim.",
+  },
+];
+
+export const heroTitles = [
+  {
+    title:
+      "KCPI - IC ICan Knowledge Centre Perubahan Iklim Indonesia Climate Innovation in Action",
+    description: "Situs Informasi Pengendalian Perubahan Iklim Indonesia",
+    cta: {
+      text: "Kenali situs ini",
+    },
+    backgroundImage: "images/landingpage/HomeSliderImageSD-1.jpg",
+  },
+  {
+    title: "Apakah Perubahan Iklim dan apa dampaknya bagi kita?",
+    description: "klik untuk mengetahui lebih jauh tentang Perubahan Iklim",
+    cta: {
+      text: "Klik !",
+    },
+    backgroundImage: "images/landingpage/HomeSliderImageSD-2.jpg",
+  },
+  {
+    title: "Jaga bumi dan cegah kenaikan suhu lebih dari 2°C!",
+    description: "Lihat aksi untuk mengetahui bagaimana caranya",
+    cta: {
+      text: "Klik !",
+    },
+    backgroundImage: "images/landingpage/HomeSliderImageSD-3.jpg",
+  },
+  {
+    title: "Apa saja inovasi yang dilakukan Indonesia?",
+    description: "klik inovasi untuk mengetahuinya",
+    cta: {
+      text: "Klik !",
+    },
+    backgroundImage: "images/landingpage/HomeSliderImageSD-4.jpg",
+  },
+  {
+    title:
+      "Profil Provinsi Apa yang sudah dilakukan provinsi untuk perubahan iklim?",
+    description: "klik aksi untuk mengetahuinya",
+    cta: {
+      text: "Klik !",
+    },
+    backgroundImage: "images/landingpage/HomeSliderImageSD-5.jpg",
   },
 ];
