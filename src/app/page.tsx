@@ -2,6 +2,7 @@ import Image from "next/image";
 import { displayInfos, displayActions } from "./dashboard-data";
 import HeroSlider from "@/components/dashboard/HeroSlider";
 import Card from "@/components/common/Card";
+import PostsByCategory from "@/components/dashboard/PostsByCategory";
 
 export default function Home() {
   const titleStyle = "text-red-500 font-semibold text-3xl my-6";
@@ -37,7 +38,7 @@ export default function Home() {
                 berbagai kegiatan manusia seperti emisi bahan bakar fosil,
                 perubahan fungsi lahan , limbah dan kegiatan-kegiatan industri.
               </p>
-              <button className=" my-6 px-8 py-2 bg-slate-700 hover:bg-slate-500 rounded text-white">
+              <button className=" my-6 px-8 py-2 bg-gray-700 hover:bg-gray-500 rounded text-white">
                 Pelajari lebih lanjut
               </button>
             </div>
@@ -54,7 +55,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" bg-slate-100">
+      <section className=" bg-gray-100">
         <div className={sectionStlye + " py-12"}>
           <div className="text-center p-12">
             <h3 className={titleStyle + " font-normal"}>
@@ -71,8 +72,7 @@ export default function Home() {
           </div>
 
           <div>
-            <div>DISPLAY CATEGORY SELECTOR</div>
-            <div>GRID POSTS 2XN</div>
+            <PostsByCategory />
           </div>
         </div>
       </section>
@@ -81,6 +81,7 @@ export default function Home() {
         <div className="flex justify-around gap-2">
           <div className="w-full">
             <iframe
+              className="rounded"
               src="https://www.youtube.com/embed/vi23xx8GMjg"
               allowFullScreen={true}
               data-ruffle-polyfilled=""
@@ -90,6 +91,7 @@ export default function Home() {
           </div>
           <div className="w-full">
             <iframe
+              className="rounded"
               src="https://www.youtube.com/embed/_U4fJtQkrkQ"
               allowFullScreen={true}
               data-ruffle-polyfilled=""
@@ -105,14 +107,22 @@ export default function Home() {
         className={"px-12 py-44 bg-green-200"}
       >
         <div className={sectionStlye}>
-          <h3 className={titleStyle + " text-center text-slate-50"}>
+          <h3 className={titleStyle + " text-center  text-gray-50"}>
             Apa yang dapat kita lakukan
           </h3>
-          {/* <div className="flex flex-wrap md:flex-nowrap gap-4">
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
             {displayActions.map((info) => {
-              return <Card key={info.title} />;
+              return (
+                <Card
+                  key={info.title}
+                  title={info.title}
+                  image={info.image}
+                  description={info.description}
+                  cta={info.cta}
+                />
+              );
             })}
-          </div> */}
+          </div>
         </div>
       </section>
 
