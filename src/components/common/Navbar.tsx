@@ -3,7 +3,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import NavList from "./NavbarList";
-import { IconButton, MobileNav, Button } from "@material-tailwind/react";
+import { IconButton, MobileNav } from "@material-tailwind/react";
+import { routes } from "./navbar/navigation";
+import MenuDropdown from "./navbar/MenuDropdown";
+
 export default function Navbars() {
   const [openNav, setOpenNav] = useState(false);
 
@@ -15,22 +18,34 @@ export default function Navbars() {
   }, []);
 
   return (
-    <nav className="z-50 fixed top-0 left-0 w-full bg-gray-50 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit ">
-      <div
-        className={`text-sm px-4 xl:w-3/5 lg:w-3/4 md:w-4/5 mx-auto flex  justify-center gap-x-6 `}
-      >
-        <div className="basis-1/3">
+    <nav className="z-50 fixed top-0 left-0 w-full bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit ">
+      <div className="text-sm px-4 xl:w-3/5 lg:w-3/4 md:w-4/5 mx-auto flex  justify-center items-center gap-x-6 ">
+        <div className="basis-3/5 sm:basis-1/2 md:basis-2/3 xl:basis-1/3">
           <Link href="/">
             <Image
               src="/images/landingpage/logo.png"
               alt="LOGO"
-              width={300}
-              height={100}
+              width={500}
+              height={500}
             ></Image>
           </Link>
         </div>
 
-        <NavList className="hidden  md:flex flex-row-reverse flex-wrap items-center gap-4 text-slate-600" />
+        <ul className="hidden md:flex flex-wrap items-center gap-4 text-slate-600">
+          {routes.map((route) => {
+            return (
+              <MenuDropdown key={route.label} menuList={route.children}>
+                {route.route ? (
+                  <Link key={route.route} href={route.route}>
+                    {route.label}
+                  </Link>
+                ) : (
+                  <a>{route.label}</a>
+                )}
+              </MenuDropdown>
+            );
+          })}
+        </ul>
 
         <IconButton
           variant="text"
@@ -72,17 +87,9 @@ export default function Navbars() {
       </div>
 
       <MobileNav className="" open={openNav}>
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto py-4">
           <div className="py-6">
             <NavList className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6" />
-          </div>
-          <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
-              <span>Log In</span>
-            </Button>
-            <Button fullWidth variant="gradient" size="sm" className="">
-              <span>Sign in</span>
-            </Button>
           </div>
         </div>
       </MobileNav>

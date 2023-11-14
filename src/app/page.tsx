@@ -104,10 +104,14 @@ export default function Home() {
 
       <section
         style={{ backgroundImage: `url("/images/landingpage/bg2.png")` }}
-        className={"px-12 md:py-36 bg-green-200"}
+        className={"px-12 md:py-12 bg-green-200"}
       >
         <div className={sectionStlye}>
-          <h3 className={titleStyle + " text-center  text-gray-50 md:pb-24"}>
+          <h3
+            className={
+              "font-semibold text-3xl my-6 text-center  text-gray-50 md:pb-24"
+            }
+          >
             Apa yang dapat kita lakukan
           </h3>
           <div className="flex flex-wrap md:flex-nowrap gap-4">

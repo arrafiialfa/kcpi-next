@@ -6,13 +6,12 @@ import Wrapper from "../common/Wrapper";
 import { heroTitles } from "@/app/dashboard-data";
 
 export default function Hero() {
-  const [displayText, setDisplayText] = useState(heroTitles);
   const [currentSlide, setCurrentSlide] = useState(2);
   const [currentOverlay, setCurrentOverlay] = useState(heroTitles[0]);
 
   useEffect(() => {
-    setCurrentOverlay(displayText[currentSlide - 2 < 0 ? 0 : currentSlide - 2]);
-  }, [currentSlide, displayText]);
+    setCurrentOverlay(heroTitles[currentSlide - 2 < 0 ? 0 : currentSlide - 2]);
+  }, [currentSlide]);
 
   return (
     <HeroSlider
@@ -53,8 +52,7 @@ export default function Hero() {
         return (
           <Slide
             key={slide.title}
-            shouldRenderMask
-            label={slide.description}
+            label={slide.title}
             background={{
               backgroundImageSrc: slide.backgroundImage,
             }}

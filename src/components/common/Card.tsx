@@ -25,7 +25,7 @@ export default function CardDefault({
   };
 }>) {
   return (
-    <Card className="mt-6 w-96">
+    <Card className="mt-6 w-96 grow">
       <CardHeader color="blue-gray" className="relative">
         <Image src={image} alt="card-image" height={700} width={700} />
       </CardHeader>
