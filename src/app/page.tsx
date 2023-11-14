@@ -119,7 +119,7 @@ export default function Home() {
               return (
                 <div key={info.description}>
                   <div className="relative w-44 h-full">
-                    <Image layout="fill" src={info.image} alt="info.png" />
+                    <Image fill={true} src={info.image} alt="info.png" />
                   </div>
                   <p className="text-sm font-light text-white py-4">
                     {info.description}
