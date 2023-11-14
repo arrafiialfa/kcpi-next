@@ -1,42 +1,48 @@
 import Image from "next/image";
-import Carousel from "@/components/common/Carousel";
-import { displayInfos } from "./dashboard-data";
+import { displayInfos, displayActions } from "./dashboard-data";
+import HeroSlider from "@/components/dashboard/HeroSlider";
+import Card from "@/components/common/Card";
 
 export default function Home() {
   const titleStyle = "text-red-500 font-semibold text-3xl my-6";
   const sectionStlye = "xl:w-3/5 lg:w-3/4 px-6 py-6 mx-auto";
+
   return (
     <main>
       <section id="hero-img">
-        <Carousel items={[]} />
+        <header className="mt-32 mb-12">
+          <HeroSlider />
+        </header>
       </section>
 
       <section className={sectionStlye}>
-        <div className="flex flex-col gap-4">
-          <div>
-            <h3 className={titleStyle}>Tentang Perubahan Iklim</h3>
-            <p className="text-justify font-light">
-              Perubahan Iklim adalah perubahan signifikan kepada iklim, suhu
-              udara dan curah hujan mulai dari dasawarsa sampai jutaan tahun.
-              Perubahan iklim terjadi karena meningkatnya konsentrasi gas karbon
-              dioksida dan gas-gas lainnya di atmosfer yang menyebabkan efek gas
-              rumah kaca.
-            </p>
+        <div className="flex flex-col md:flex-row lg:flex-col gap-x-6 gap-y-8">
+          <div className=" basis-1/2">
+            <div>
+              <h3 className={titleStyle}>Tentang Perubahan Iklim</h3>
+              <p className="text-justify font-light">
+                Perubahan Iklim adalah perubahan signifikan kepada iklim, suhu
+                udara dan curah hujan mulai dari dasawarsa sampai jutaan tahun.
+                Perubahan iklim terjadi karena meningkatnya konsentrasi gas
+                karbon dioksida dan gas-gas lainnya di atmosfer yang menyebabkan
+                efek gas rumah kaca.
+              </p>
+            </div>
+            <div>
+              <h4 className=" text-gray-800 font-semibold text-xl my-3">
+                Penyebab Peningkatan Gas Rumah Kaca
+              </h4>
+              <p className="text-jusitfy font-light">
+                Peningkatan konsentrasi gas rumah kaca tersebut, disebabkan oleh
+                berbagai kegiatan manusia seperti emisi bahan bakar fosil,
+                perubahan fungsi lahan , limbah dan kegiatan-kegiatan industri.
+              </p>
+              <button className=" my-6 px-8 py-2 bg-slate-700 hover:bg-slate-500 rounded text-white">
+                Pelajari lebih lanjut
+              </button>
+            </div>
           </div>
-          <div>
-            <h4 className=" text-gray-800 font-semibold text-xl my-3">
-              Penyebab Peningkatan Gas Rumah Kaca
-            </h4>
-            <p className="text-jusitfy font-light">
-              Peningkatan konsentrasi gas rumah kaca tersebut, disebabkan oleh
-              berbagai kegiatan manusia seperti emisi bahan bakar fosil,
-              perubahan fungsi lahan , limbah dan kegiatan-kegiatan industri.
-            </p>
-            <button className=" my-6 px-14 py-4 bg-slate-800 rounded-sm text-white">
-              Pelajari lebih lanjut
-            </button>
-          </div>
-          <div className="w-full my-8">
+          <div className="w-full grow basis-1/2">
             <iframe
               src="http://www.youtube.com/embed/L-p4Pgotk-Q?rel=0&amp;showinfo=0&amp;0autoplay=1"
               allowFullScreen={true}
@@ -95,33 +101,39 @@ export default function Home() {
       </section>
 
       <section
-        style={{
-          backgroundImage: "images/bg2.png",
-        }}
-        className={"p-12 bg-green-200"}
+        style={{ backgroundImage: `url("/images/landingpage/bg2.png")` }}
+        className={"px-12 py-44 bg-green-200"}
       >
         <div className={sectionStlye}>
-          <h3 className={titleStyle + " text-center text-white "}>
+          <h3 className={titleStyle + " text-center text-slate-50"}>
             Apa yang dapat kita lakukan
           </h3>
-          <div className="flex justify-center gap-3">
-            <div>CARD 1</div>
-            <div>CARD 2</div>
-            <div>CARD 3</div>
-          </div>
+          {/* <div className="flex flex-wrap md:flex-nowrap gap-4">
+            {displayActions.map((info) => {
+              return <Card key={info.title} />;
+            })}
+          </div> */}
         </div>
       </section>
 
       <section className="bg-red-500">
         <div className={sectionStlye}>
-          <div className="flex justify-center gap-5 py-12 pb-40">
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
             {displayInfos.map((info) => {
               return (
-                <div key={info.description}>
-                  <div className="relative w-44 h-full">
-                    <Image fill={true} src={info.image} alt="info.png" />
+                <div
+                  className="grid grid-cols-2 shadow py-3 px-2 w-full"
+                  key={info.description}
+                >
+                  <div className="md:col-span-2">
+                    <Image
+                      height={150}
+                      width={150}
+                      src={info.image}
+                      alt="info.png"
+                    />
                   </div>
-                  <p className="text-sm font-light text-white py-4">
+                  <p className="md:col-span-2 text-sm font-light text-left text-white py-4">
                     {info.description}
                   </p>
                 </div>

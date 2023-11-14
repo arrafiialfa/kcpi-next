@@ -1,10 +1,11 @@
-import Layout from "@/components/Layout";
-import { AppProps } from "next/app";
+import type { AppProps } from "next/app";
+// @material-tailwind/react
+import { ThemeProvider } from "@material-tailwind/react";
 
-export default function App({Component,pageProps}:AppProps){
-    return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    )
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
