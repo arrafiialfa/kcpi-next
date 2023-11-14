@@ -6,12 +6,12 @@ import PostsByCategory from "@/components/dashboard/PostsByCategory";
 
 export default function Home() {
   const titleStyle = "text-red-500 font-semibold text-3xl my-6";
-  const sectionStlye = "xl:w-3/5 lg:w-3/4 px-6 py-6 mx-auto";
+  const sectionStlye = "xl:w-3/5 lg:w-3/4 px-6 py-12 md:py-24 mx-auto";
 
   return (
     <main>
       <section id="hero-img">
-        <header className="mt-32 mb-12">
+        <header className="pt-28 mb-12">
           <HeroSlider />
         </header>
       </section>
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
           <div className="w-full grow basis-1/2">
             <iframe
-              src="http://www.youtube.com/embed/L-p4Pgotk-Q?rel=0&amp;showinfo=0&amp;0autoplay=1"
+              src="https://www.youtube.com/embed/L-p4Pgotk-Q?rel=0&amp;showinfo=0&amp;0autoplay=1"
               allowFullScreen={true}
               data-ruffle-polyfilled=""
               height={400}
@@ -81,7 +81,7 @@ export default function Home() {
         <div className="flex justify-around gap-2">
           <div className="w-full">
             <iframe
-              className="rounded"
+              className="rounded shadow-md"
               src="https://www.youtube.com/embed/vi23xx8GMjg"
               allowFullScreen={true}
               data-ruffle-polyfilled=""
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
           <div className="w-full">
             <iframe
-              className="rounded"
+              className="rounded shadow-md"
               src="https://www.youtube.com/embed/_U4fJtQkrkQ"
               allowFullScreen={true}
               data-ruffle-polyfilled=""
@@ -104,10 +104,10 @@ export default function Home() {
 
       <section
         style={{ backgroundImage: `url("/images/landingpage/bg2.png")` }}
-        className={"px-12 py-44 bg-green-200"}
+        className={"px-12 md:py-36 bg-green-200"}
       >
         <div className={sectionStlye}>
-          <h3 className={titleStyle + " text-center  text-gray-50"}>
+          <h3 className={titleStyle + " text-center  text-gray-50 md:pb-24"}>
             Apa yang dapat kita lakukan
           </h3>
           <div className="flex flex-wrap md:flex-nowrap gap-4">
