@@ -17,7 +17,7 @@ export default function Navbars() {
   }, []);
 
   return (
-    <nav className="z-50 fixed top-0 left-0 bg-white bg-opacity-90 w-full pb-6 pt-8 backdrop-blur-3xl  ">
+    <nav className="z-50 fixed top-0 left-0 bg-white bg-opacity-90 w-full  py-2 sm:pb-6 sm:pt-8 backdrop-blur-3xl  ">
       <div className="text-sm px-4 xl:w-3/5 lg:w-3/4 md:w-4/5 mx-auto flex  justify-center items-center gap-x-6 ">
         <div className="basis-3/5 sm:basis-1/2 md:basis-2/3 xl:basis-1/3">
           <Link href="/">
