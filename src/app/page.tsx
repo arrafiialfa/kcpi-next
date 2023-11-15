@@ -58,8 +58,12 @@ export default function Home() {
 
       <section className=" bg-gray-100">
         <div className={sectionStlye + " py-12"}>
-          <div className="text-center p-12">
-            <h3 className={titleStyle + " font-normal"}>
+          <div className="text-center  px-2 py-6 md:p-12">
+            <h3
+              className={
+                "text-red-500 text-3xl my-6 font-semibold text-left sm:text-center"
+              }
+            >
               Dampak Negatif Perubahan Iklim
             </h3>
             <p className="text-justify font-light">
@@ -72,7 +76,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div>
+          <div className="w-full">
             <PostsByCategory />
           </div>
         </div>
