@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       <section className=" bg-gray-100">
-        <div className={sectionStlye + " py-12"}>
+        <div className={sectionStlye + " py-12 pb-12"}>
           <div className="text-center  px-2 py-6 md:p-12">
             <h3
               className={
