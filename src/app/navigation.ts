@@ -34,13 +34,21 @@ export const routes: Route[] = [
         route: "/info-iklim",
         children: [
             {
-                route: "/info-iklim/mengenai-pi",
+                route: "/info-iklim/perubahan-iklim",
                 label: "Mengenai Perubahan Iklim",
             },
             {
                 route: "/info-iklim/dampak-dan-fenomena",
                 label: "Dampak dan Fenomena",
-            }
+            },
+            {
+                route: "/info-iklim/skenario-iklim",
+                label: "Skenario Iklim"
+            },
+            {
+                route: "/info-iklim/skenario-iklim-indonesia",
+                label: "Skenario Iklim Indonesia"
+            },
         ]
     },
     {
@@ -62,6 +70,18 @@ export const routes: Route[] = [
             {
                 route: "/aksi/proklim",
                 label: "PROKLIM"
+            },
+            {
+                route: "/aksi/perjanian-paris",
+                label: "Perjanjian Paris",
+            },
+            {
+                route: "/aksi/karhutla",
+                label: "Karhutla"
+            },
+            {
+                route: "/aksi/srn",
+                label: "SRN"
             }
         ]
     },
@@ -94,6 +114,23 @@ export const routes: Route[] = [
     {
         route: "/profil-provinsi",
         label: "Profil Provinsi"
+    },
+    {
+        route: "/kawal-karbon",
+        label: "Kawal Karbon",
+        children: [
+            {
+                route: "/kawal-karbon/infografis-ndc",
+                label: "Infografis NDC"
+            },
+            {
+                route: "/kawal-karbon/kamus-kawal-karbon",
+                label: "Kamus Kawal karbon"
+            }
+        ]
     }
 
 ]
+
+
+//todo handle multi nested routes

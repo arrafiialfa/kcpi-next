@@ -30,7 +30,7 @@ export default function Navbars() {
           </Link>
         </div>
 
-        <ul className="hidden md:flex flex-wrap flex-row-reverse justify-start  items-center gap-2 text-slate-600">
+        <ul className="hidden md:flex flex-wrap flex-row-reverse justify-end  items-center gap-2 text-slate-600">
           {routes.map((route) => {
             return (
               <MenuDropdown key={route.label} menuList={route.children}>
@@ -92,7 +92,7 @@ export default function Navbars() {
               {routes.map((route) => {
                 return (
                   <MenuDropdown key={route.label} menuList={route.children}>
-                    {route.route ? (
+                    {route.route && !route.children ? (
                       <Link key={route.route} href={route.route}>
                         {route.label}
                       </Link>
