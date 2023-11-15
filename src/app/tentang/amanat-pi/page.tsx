@@ -2,7 +2,6 @@
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
-import DisplayInfo from "@/components/dashboard/DisplayInfo";
 import FeedbackForm from "@/components/forms/FeedbackForm";
 
 export default function AmanatPI() {
@@ -33,81 +32,69 @@ export default function AmanatPI() {
           className="my-12"
         >
           <div>
-            <Typography variant="h3" className="mb-4 font-normal">
-              Apa Itu Knowledge Centre ?
+            <Typography variant="h3" className="mb-6 font-bold">
+              Amanat Perubahan Iklim
             </Typography>
             <div className="font-light text-justify">
-              <p className="mb-8">
-                Peningkatan konsentrasi gas rumah kaca di atmosfer bumi
-                menyebabkan peningkatan suhu bumi yang berdampak pada perubahan
-                iklim global. Hal ini mengakibatkan sejumlah permasalahan
-                lingkungan dan cuaca ekstrim yang berakibat pada terjadinya
-                bencana alam seperti longsor, kebakaran hutan, kekeringan, dan
-                gagal panen di berbagai daerah di Indonesia. Perubahan iklim
-                juga mengancam kehidupan masyarakat pantai karena pemanasan
-                global menyebabkan abrasi dan intrusi air laut. Dampak perubahan
-                iklim mempengaruhi kehidupan perekonomian, mengancam kestabilan
-                ekosistem dan memperpendek usia infrastruktur yang mendukung
-                kehidupan masyarakat. Penelitian menyimpulkan bahwa manusia
-                adalah subjek penyebab peningkatan gas rumah kaca sekaligus
-                penderita akibat dari perubahan iklim. Akan tetapi, mayoritas
-                manusia tidak menyadari hal ini. Sehingga terus-menerus
-                melakukan tindakan yang memproduksi gas rumah kaca dan
-                menyebabkan kenaikan suhu bumi. Untuk itu dibutuhkan suatu media
-                informasi untuk menyadarkan masayarakat tentang posisinya dalam
-                pemanasan dan perubahan iklim.
-              </p>
-              <p className="mb-8">
-                Penelitian menyimpulkan bahwa manusia adalah subjek penyebab
-                peningkatan gas rumah kaca sekaligus penderita akibat dari
-                perubahan iklim. Akan tetapi, mayoritas manusia tidak menyadari
-                hal ini. Sehingga terus-menerus melakukan tindakan yang
-                memproduksi gas rumah kaca dan menyebabkan kenaikan suhu bumi.
-                Untuk itu dibutuhkan suatu media informasi untuk menyadarkan
-                masayarakat tentang posisinya dalam pemanasan dan perubahan
-                iklim.
-              </p>
-            </div>
-            <div className="mb-8">
-              <Image
-                src="/images/tentang/tentang-knowledge-center.png"
-                alt="tentang-knowledge-centre picture"
-                height={500}
-                width={1500}
-              />
-            </div>
-            <div className="text-justify font-light">
-              <p className="mb-8">
-                Sebagai National Focal Point Pengendalian Perubahan Iklim di
-                Indonesia, Kementerian Lingkungan Hidup dan Kehutanan melalui
-                Direktorat Jenderal Pengendalian Perubahan Iklim membuat suatu
-                wadah pengetahuan untuk masyarakat luas di Indonesia. Wadah ini
-                dikemas dalam bentuk Knowledge Centre yang berisi pengetahuan
-                tentang penyebab, dampak dan potensi perubahan iklim di
-                Indonesia.
-              </p>
-              <p className="mb-8">
-                Kelompok sasaran pembangunan website KCPI - IC ICan ditujukan
-                untuk masyarakat umum sehingga format penyajian data dan
-                informasi dibuat dalam narasi sederhana yang disertai dengan
-                tampilan infografis, video, animasi dan peta. Di antaranya
-                adalah pengertian perubahan iklim, dampak-dampak perubahan
-                iklim, respons dunia terhadap perubahan iklim beserta reaksi dan
-                tindakannya, peran Indonesia dalam isu perubahan iklim dan
-                informasi terkait hal-hal apa saja yang bisa dilakukan oleh
-                masyarakat untuk berpartisipasi menurunkan suhu bumi dan
-                mengendalikan perubahan iklim.
-              </p>
-              <p className="mb-8">
-                Tujuan pembangunan Knowledge Centre adalah memberikan edukasi
-                masyarakat tentang perubahan iklim dan meningkatkan peran aktif
-                dalam aksi nyata pengendalian perubahan iklim.
-              </p>
-            </div>
-            <div className="flex justify-center lg:justify-start">
-              <div className="p-6 shadow-sm rounded-sm max-w-min  border-2">
-                <FeedbackForm />
+              <div className="md:float-left flex justify-center">
+                <div className="relative w-96 h-96">
+                  <Image
+                    alt="roadmap amanat perubahan iklim"
+                    src="/images/tentang/amanat-pi.png"
+                    fill
+                    objectFit="contain"
+                  />
+                </div>
               </div>
+              <p className="mb-8">
+                Laporan Kajian Ke-5 (Assessment Reports 5 atau AR5)
+                Intergovermental Panel on Climate Change (IPCC) menyebutkan
+                bahwa suhu bumi telah meningkat sekitar 0,8°C selama abad
+                terakhir. Pada akhir tahun 2100, suhu global diperkirakan akan
+                lebih tinggi 1.8-4°C dibandingkan rata-rata suhu pada 1980-1999.
+                Kenaikan suhu ini setara dengan 2.5-4.7°C jika dibandingkan
+                periode pra-industri (1750). Laporan IPCC juga menegaskan bahwa
+                terjadinya perubahan iklim yang berupa meningkatnya emisi gas
+                rumah kaca (karbon dioksida, metana, nitrogen oksida dan
+                sejumlah gas industri) diakibatkan oleh aktivitas manusia
+                Peningkatan emisi gas rumah kaca dalam 50 tahun terkahir
+                menunjukkan yang tertinggi dalam sejarah dan belum pernah
+                terjadi sebelumnya sejak 800.000 tahun yang lalu. Perubahan
+                iklim juga telah berdampak pada ekosistem dan manusia di seluruh
+                bagian benua dan samudera di dunia serta beresiko besar bagi
+                kesehatan manusia, keamanan pangan global, dan pembangunan
+                ekonomi. Permasalahan perubahan iklim dan dampaknya mendorong
+                Konferensi Tingkat Tinggi (KTT) Bumi di Rio de Janeiro, Brazil
+                tahun 1992, menghasilkan Konvensi Kerangka Kerja Perserikatan
+                Bangsa-Bangsa tentang Perubahan Iklim (United Nations Framework
+                Convention on Climate Change, UNFCCC). Konvensi ini bertujuan
+                untuk menstabilisasi konsentrasi gas-gas rumah kaca di atmosfer
+                pada tingkat yang tidak membahayakan sistem iklim sehingga
+                ekosistem dapat memberikan jaminan pada produksi pangan dan
+                keberlanjutan pada pembangunan ekonomiKonvensi Perubahan Iklim
+                memiliki kekuatan hukum sejak 21 Maret 1994 dengan membagi
+                negara-negara peratifikasi dalam 2 (dua) kelompok, yaitu Negara
+                Annex I dan Negara Non-Annex I. Negara Annex I adalah
+                negara-negara penyumbang emisi GRK sejak revolusi industri.
+                Sedangkan Negara Non-Annex I adalah negara-negara yang tidak
+                termasuk dalam Annex I yang kontribusinya terhadap emisi GRK
+                jauh lebih sedikit dan memiliki pertumbuhan ekonomi yang jauh
+                lebih rendah.
+              </p>
+            </div>
+            <div className="p-4 shadow">
+              <iframe
+                src="https://www.youtube.com/embed/S6En2UKGEH8?si=sfKvtpND3mDq5a8e"
+                title="YouTube video player"
+                allowFullScreen={true}
+                data-ruffle-polyfilled=""
+                height={500}
+                width="100%"
+              ></iframe>
+              <p className="text-xs pt-4 font-light text-center">
+                Komitmen Indonesia untuk aksi nyata, Pidato Bapak Presiden RI
+                Joko Widodo pada acara Paris Agreement 2015
+              </p>
             </div>
           </div>
         </PageLayout>
