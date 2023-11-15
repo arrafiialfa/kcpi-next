@@ -112,7 +112,7 @@ export default function Home() {
           backgroundImage: `url("/images/landingpage/bg2.png")`,
           backgroundSize: "cover",
         }}
-        className={"px-12 py-12 "}
+        className={"px-4 sm:px-12 py-12 "}
       >
         <div className={sectionStlye}>
           <h3
