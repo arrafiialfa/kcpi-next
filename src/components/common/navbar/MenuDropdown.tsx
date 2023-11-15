@@ -11,7 +11,7 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { Route } from "./navigation";
+import { Route } from "../../../app/navigation";
 export default function MenuDropdown({
   children,
   menuList,

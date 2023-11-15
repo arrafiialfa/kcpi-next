@@ -3,6 +3,7 @@ import { displayInfos, displayActions } from "./dashboard-data";
 import HeroSlider from "@/components/dashboard/HeroSlider";
 import Card from "@/components/common/Card";
 import PostsByCategory from "@/components/dashboard/PostsByCategory";
+import DisplayInfo from "@/components/dashboard/DisplayInfo";
 
 export default function Home() {
   const titleStyle = "text-red-500 font-semibold text-3xl my-6";
@@ -11,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <section id="hero-img">
-        <header className="pt-28 pb-12">
+        <header className="pt-28 pb-12 h-screen">
           <HeroSlider />
         </header>
       </section>
@@ -132,28 +133,7 @@ export default function Home() {
 
       <section className="bg-red-500">
         <div className={" xl:w-3/5 lg:w-3/4 px-6 py-12  mx-auto "}>
-          <div className="flex flex-wrap md:flex-nowrap gap-4">
-            {displayInfos.map((info) => {
-              return (
-                <div
-                  className="grid grid-cols-2 shadow py-3 px-2 w-full"
-                  key={info.description}
-                >
-                  <div className="md:col-span-2">
-                    <Image
-                      height={150}
-                      width={150}
-                      src={info.image}
-                      alt="info.png"
-                    />
-                  </div>
-                  <p className="md:col-span-2 text-sm font-light text-left text-white py-4">
-                    {info.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+          <DisplayInfo />
         </div>
       </section>
 

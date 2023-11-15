@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IconButton, Collapse } from "@material-tailwind/react";
-import { routes } from "./navbar/navigation";
+import { routes } from "../../app/navigation";
 import MenuDropdown from "./navbar/MenuDropdown";
 
 export default function Navbars() {
@@ -34,7 +34,7 @@ export default function Navbars() {
           {routes.map((route) => {
             return (
               <MenuDropdown key={route.label} menuList={route.children}>
-                {route.route ? (
+                {route.route && !route.children ? (
                   <Link key={route.route} href={route.route}>
                     {route.label}
                   </Link>

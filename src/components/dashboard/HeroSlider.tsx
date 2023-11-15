@@ -18,7 +18,7 @@ export default function Hero() {
       autoplay={false}
       animations={{ slidingAnimation: "fade" }}
       width="full"
-      height={650}
+      height={1000}
       controller={{
         initialSlide: 2,
         slidingDuration: 500,
@@ -36,7 +36,7 @@ export default function Hero() {
     >
       <Overlay>
         <Wrapper>
-          <h1 className="m-0 p-0 w-3/5 text-center text-2xl xl:text-3xl font-bold text-white">
+          <h1 className="m-0 p-0 w-3/5 text-center text-2xl xl:text-4xl font-bold text-white">
             {currentOverlay.title}
           </h1>
           <p className=" text-white font-light my-8 text-center">

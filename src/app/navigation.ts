@@ -9,6 +9,7 @@ export type Route = {
 export const routes: Route[] = [
     {
         label: "Tentang",
+        route: "/tentang",
         children: [
             {
                 label: "Knowledge Centre",
@@ -22,6 +23,7 @@ export const routes: Route[] = [
     },
     {
         label: "Info Iklim",
+        route: "/info-iklim",
         children: [
             {
                 route: "/info-iklim/mengenai-pi",
@@ -35,6 +37,7 @@ export const routes: Route[] = [
     },
     {
         label: "Aksi",
+        route: "/aksi",
         children: [
             {
                 route: "/aksi/mitigasi",
@@ -56,6 +59,7 @@ export const routes: Route[] = [
     },
     {
         label: "Sumber Daya",
+        route: "/sumber-daya",
         children: [
             {
                 route: "/sumber-daya/sumber-dana",
