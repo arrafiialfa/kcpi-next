@@ -1,33 +1,15 @@
 "use client";
-import { Typography, Button } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 import DisplayInfo from "@/components/dashboard/DisplayInfo";
 import FeedbackForm from "@/components/forms/FeedbackForm";
 
-export default function AboutKnowledgeCentre() {
+export default function AmanatPI() {
   const sectionStlye = "xl:w-3/5 lg:w-3/4 px-6 py-12 md:py-24 mx-auto";
   return (
     <main>
-      <section>
-        <div className="relative h-96 w-full mt-24">
-          <Image
-            src="/images/tentang/photo-test.avif"
-            alt="image 1"
-            fill={true}
-            objectFit="cover"
-          />
-          <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/70 py-6">
-            <div className="w-3/4 text-center md:w-2/4">
-              <Typography variant="h1" color="white" className="mb-4 text-xl ">
-                Tentang Knowledge Centre Perubahan Iklim Indonesia Climate
-                Innovation in Action KCPI - IC ICan
-              </Typography>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
+      <section className="pt-32">
         <PageLayout
           routes={[
             {
@@ -45,7 +27,7 @@ export default function AboutKnowledgeCentre() {
               ),
             },
             {
-              label: "Tentang Knowledge Centre",
+              label: "Amanat Perubahan Iklim",
             },
           ]}
           className="my-12"

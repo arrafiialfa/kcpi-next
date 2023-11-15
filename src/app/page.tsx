@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <section id="hero-img">
-        <header className="pt-6 pb-12">
+        <header className="py-12">
           <HeroSlider />
         </header>
       </section>
@@ -105,7 +105,7 @@ export default function Home() {
 
       <section
         style={{ backgroundImage: `url("/images/landingpage/bg2.png")` }}
-        className={"px-12 md:py-12"}
+        className={"px-12 py-12"}
       >
         <div className={sectionStlye}>
           <h3
