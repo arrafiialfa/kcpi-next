@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReadNext from "@/app/tentang/ReadNext";
 
-export default function PerubahanIklim() {
+export default function SkenarioIklim() {
   return (
     <main>
       <section>

@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import { color } from "@material-tailwind/react/types/components/alert";
 
 type Post = {
   title: string;
@@ -22,9 +23,15 @@ type Post = {
 export default function PostsByCategory({
   categories = displayCategories,
   posts = displayPosts,
+  className,
+  cardsClassName,
+  cardsColor,
 }: Readonly<{
   categories?: string[];
   posts?: Post[];
+  className?: string;
+  cardsClassName?: string;
+  cardsColor?: color;
 }>) {
   const [activePosts, setActivePosts] = useState<Post[]>([]);
   const [active, setActive] = useState(categories[0]);
@@ -41,7 +48,7 @@ export default function PostsByCategory({
   }, [active, posts]);
 
   return (
-    <div>
+    <div className={className}>
       <Tabs value="html">
         <TabsHeader>
           {categories.map((category) => (
@@ -66,7 +73,8 @@ export default function PostsByCategory({
                 <Card
                   shadow={false}
                   key={post.title}
-                  className="mt-6 w-96 grow"
+                  color={cardsColor || "transparent"}
+                  className={" mt-6 w-96 grow " + cardsClassName}
                 >
                   <CardBody>
                     <div className="mb-6 w-full h-44 relative rounded overflow-clip">

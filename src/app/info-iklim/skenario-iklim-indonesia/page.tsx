@@ -1,12 +1,10 @@
 "use client";
 
 import PageLayout from "@/components/PageLayout";
-import { Typography, Button } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import Link from "next/link";
-import ReadNext from "@/app/tentang/ReadNext";
 
-export default function PerubahanIklim() {
+export default function SkenarioIklimIndonesia() {
   return (
     <main>
       <section>
