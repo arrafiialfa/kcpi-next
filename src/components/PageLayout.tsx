@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Breadcrumbs } from "@material-tailwind/react";
 import { Route } from "../app/navigation";
