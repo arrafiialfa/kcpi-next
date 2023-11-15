@@ -1,8 +1,15 @@
 "use client";
-import { Typography } from "@material-tailwind/react";
+import {
+  Typography,
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+} from "@material-tailwind/react";
 import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
-import FeedbackForm from "@/components/forms/FeedbackForm";
+import Link from "next/link";
+import ReadNext from "../ReadNext";
 
 export default function AmanatPI() {
   const sectionStlye = "xl:w-3/5 lg:w-3/4 px-6 py-12 md:py-24 mx-auto";
@@ -97,6 +104,26 @@ export default function AmanatPI() {
               </p>
             </div>
           </div>
+          <ReadNext
+            cards={[
+              {
+                title: "Komitmen Indonesia Dalam Pengendalian Perubahan Iklim",
+                description:
+                  "Indonesia telah terlibat aktif di tingkat internasional sebagai salah satu negara peratifikasi Konvensi Kerangka Kerja Perubahan Iklim (UNFCCC) dan Protocol Kyoto.",
+                cta: {
+                  href: "/tentang/komitmen-indonesia",
+                },
+              },
+              {
+                title: "Konvensi Perubahan Iklim",
+                description:
+                  "Kerangka Konvensi UNFCCC membentuk badan pengambilan keputusan tertinggi yaitu Pertemuan Para Pihak (Conference of the Parties, COP) untuk mencapai tujuannya.",
+                cta: {
+                  href: "/tentang/konvensi",
+                },
+              },
+            ]}
+          />
         </PageLayout>
       </section>
     </main>

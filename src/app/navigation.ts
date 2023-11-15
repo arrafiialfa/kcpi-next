@@ -18,6 +18,14 @@ export const routes: Route[] = [
             {
                 label: "Amanat Perubahan Iklim",
                 route: "/tentang/amanat-pi",
+            },
+            {
+                label: "Konvensi",
+                route: "/tentang/konvensi",
+            },
+            {
+                label: "Komitmen Indonesia",
+                route: "/tentang/komitmen-indonesia",
             }
         ]
     },
