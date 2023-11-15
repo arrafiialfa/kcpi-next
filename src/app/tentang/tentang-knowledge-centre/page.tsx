@@ -7,10 +7,11 @@ import FeedbackForm from "@/components/forms/FeedbackForm";
 
 export default function AboutKnowledgeCentre() {
   const sectionStlye = "xl:w-3/5 lg:w-3/4 px-6 py-12 md:py-24 mx-auto";
+
   return (
     <main>
       <section>
-        <div className="relative h-96 w-full mt-24">
+        <div className="relative h-96 w-full mt-24 overflow-clip anima">
           <Image
             src="/images/tentang/photo-test.avif"
             alt="image 1"
