@@ -7,12 +7,12 @@ import DisplayInfo from "@/components/dashboard/DisplayInfo";
 
 export default function Home() {
   const titleStyle = "text-red-500 font-semibold text-3xl my-6";
-  const sectionStlye = "xl:w-3/5 lg:w-3/4 px-6 py-12 md:py-24 mx-auto";
+  const sectionStlye = "xl:w-3/5 lg:w-3/4 px-6 py-3 sm:py-12 md:py-24 mx-auto";
 
   return (
     <main>
       <section id="hero-img">
-        <header className="pt-28 pb-12 h-screen">
+        <header className="pt-6 pb-12">
           <HeroSlider />
         </header>
       </section>
@@ -44,12 +44,12 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="w-full grow basis-1/2">
+          <div className="w-full grow basis-1/2 overflow-clip rounded shadow-sm">
             <iframe
               src="https://www.youtube.com/embed/L-p4Pgotk-Q?rel=0&amp;showinfo=0&amp;0autoplay=1"
               allowFullScreen={true}
               data-ruffle-polyfilled=""
-              height={400}
+              height={500}
               width="100%"
             ></iframe>
           </div>

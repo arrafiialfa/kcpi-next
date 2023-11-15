@@ -18,7 +18,7 @@ export default function Hero() {
       autoplay={false}
       animations={{ slidingAnimation: "fade" }}
       width="full"
-      height={1000}
+      height={600}
       controller={{
         initialSlide: 2,
         slidingDuration: 500,

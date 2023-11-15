@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IconButton, Collapse } from "@material-tailwind/react";
-import { routes } from "../../app/navigation";
-import MenuDropdown from "./navbar/MenuDropdown";
+import { routes } from "../../../app/navigation";
+import MenuDropdown from "./MenuDropdown";
 
 export default function Navbars() {
   const [openNav, setOpenNav] = useState(false);
