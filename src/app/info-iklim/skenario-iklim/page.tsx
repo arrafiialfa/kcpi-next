@@ -4,6 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import { Typography, Button } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
+import ReadNext from "@/app/tentang/ReadNext";
 
 export default function PerubahanIklim() {
   return (
@@ -122,6 +123,21 @@ export default function PerubahanIklim() {
                   width={1500}
                 />
               </div>
+            </div>
+            <div className="mb-8">
+              <ReadNext
+                cards={[
+                  {
+                    title: "Skenario Iklim Indonesia",
+                    description:
+                      "Proyeksi skenario iklim di Indonesia menggunakan model Regional Climate Model (RCM) yang merupakan turunan dari Global Climate Model (GCM).",
+                    cta: {
+                      href: "/info-iklim/skenario-iklim-indonesia",
+                      text: "Lihat Skenario Iklim Indonesia",
+                    },
+                  },
+                ]}
+              />
             </div>
           </div>
         </PageLayout>
