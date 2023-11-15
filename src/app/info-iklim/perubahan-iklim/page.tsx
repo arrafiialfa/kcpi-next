@@ -33,7 +33,7 @@ export default function PerubahanIklim() {
           Mengenai Perubahan Iklim
         </Typography>
         <div className="font-light text-justify">
-          <div className="md:float-left flex justify-center">
+          <div className="md:float-left flex justify-center pb-6 ">
             <div className="relative w-96 h-96">
               <Image
                 alt="about perubahan iklim"
