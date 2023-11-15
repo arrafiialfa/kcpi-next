@@ -108,8 +108,11 @@ export default function Home() {
       </section>
 
       <section
-        style={{ backgroundImage: `url("/images/landingpage/bg2.png")` }}
-        className={"px-12 py-12"}
+        style={{
+          backgroundImage: `url("/images/landingpage/bg2.png")`,
+          backgroundSize: "cover",
+        }}
+        className={"px-12 py-12 "}
       >
         <div className={sectionStlye}>
           <h3
@@ -119,7 +122,7 @@ export default function Home() {
           >
             Apa yang dapat kita lakukan ?
           </h3>
-          <div className="flex flex-wrap md:flex-nowrap gap-4">
+          <div className="flex flex-wrap md:flex-nowrap gap-x-4 gap-y-8 ">
             {displayActions.map((info) => {
               return (
                 <Card
