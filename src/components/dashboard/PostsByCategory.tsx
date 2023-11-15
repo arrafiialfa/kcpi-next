@@ -60,7 +60,7 @@ export default function PostsByCategory({
           ))}
         </TabsHeader>
         <TabsBody>
-          <div className="flex justify-between gap-4">
+          <div className="flex flex-wrap justify-between gap-4">
             {activePosts.map((post) => {
               return (
                 <Card key={post.title} className="mt-6 w-96 grow">
