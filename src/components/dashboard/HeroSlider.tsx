@@ -39,12 +39,12 @@ export default function Hero() {
           <h1 className="m-0 p-0 w-3/5 text-center text-2xl xl:text-4xl font-bold text-white">
             {currentOverlay.title}
           </h1>
-          <p className=" text-white font-light my-8 text-center">
+          {/* <p className=" text-white font-light my-8 text-center">
             {currentOverlay.description}
-          </p>
-          <button className="px-8 py-4 text-white border-2">
+          </p> */}
+          {/* <button className="px-8 py-4 text-white border-2">
             {currentOverlay.cta.text}
-          </button>
+          </button> */}
         </Wrapper>
       </Overlay>
 
