@@ -123,7 +123,7 @@ export default function AboutKnowledgeCentre() {
               </p>
             </div>
             <div className="flex justify-center lg:justify-start">
-              <div className="p-6 shadow-sm rounded-sm max-w-min  border-2">
+              <div className="p-6 shadow-sm rounded-sm w-full  border-2">
                 <FeedbackForm />
               </div>
             </div>

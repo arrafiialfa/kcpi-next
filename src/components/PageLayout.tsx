@@ -33,7 +33,7 @@ export default function PageLayout({
         {children}
       </div>
       <section className="bg-red-500">
-        <div className={" xl:w-3/5 lg:w-3/4 px-6 py-12  mx-auto "}>
+        <div className={" xl:w-3/5 lg:w-3/4 px-6 py-12 mx-auto "}>
           <DisplayInfo />
         </div>
       </section>
